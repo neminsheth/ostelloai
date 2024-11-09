@@ -208,15 +208,22 @@ class HomePage extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          'About',
-          style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+         const Row(
+          children:[
+            Icon(Icons.info_outline, color: Colors.black),
+            SizedBox(width: 7),
+            Text(
+            'About',
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+          ),
+          ],
         ),
         SizedBox(height: 8),
         Text(
           'Most shocking news most shocking news most shocking news most shocking news most shocking news most shocking news. Most shocking news most shocking news most shocking news most shocking news most shocking news most shocking news.',
           style: TextStyle(fontSize: 14, color: Colors.grey[600]),
         ),
+
       ],
     );
   }
@@ -250,7 +257,7 @@ class HomePage extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Column(
+          const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
@@ -281,21 +288,25 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
-          ElevatedButton(
-            onPressed: () {},
-            child: Text(
-              'Join',
-              style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.white
+          Container(
+            //height: 31.35,
+            //width: 159,
+            child: ElevatedButton(
+              onPressed: () {},
+              child: Text(
+                'Join',
+                style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.white
+                ),
               ),
-            ),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.black,
-              padding: EdgeInsets.symmetric(horizontal: 32, vertical: 12),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.black,
+                padding: EdgeInsets.symmetric(horizontal: 75, vertical: 12),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
               ),
             ),
           ),
